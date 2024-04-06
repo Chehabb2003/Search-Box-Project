@@ -54,4 +54,8 @@
     font-style: italic;
 }
 
+.posts-found{
+   color: red;
+   font-weight: bold;
+}
 

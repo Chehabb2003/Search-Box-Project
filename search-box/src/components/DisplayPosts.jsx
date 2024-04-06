@@ -17,10 +17,10 @@ const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
         <div className="display-posts">
             {filteredArticles.length > 0 && searchValue !== '' & searchValue!== ' ' ? (
                 <div className="displayed">
-                    {matchedCount > 1 ? <div className="displayed-count">{`${matchedCount} posts were found`}</div> : (
-                        <div className="displayed-count">{`${matchedCount} post was found`}</div>
+                    {matchedCount > 1 ? <div className="displayed-count"><span className='posts-found'>{`${matchedCount}`} posts </span>were found</div> : (
+                        <div className="displayed-count"><span className='posts-found'>{`${matchedCount}`} post</span> was found</div>
                     )}
-                    {filteredArticles.map((article, i) => 
+                    {filteredArticles.map((article) => 
                         <div className="article">
                             <h1 className="title">{highightText(article.title, searchValue)}</h1>
                             <p className="Date">{article.date}</p>
