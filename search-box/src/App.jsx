@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <DisplayPosts searchValue={searchValue}>/
+      <DisplayPosts searchValue ={searchValue}/>
     </div>
   );
 }
