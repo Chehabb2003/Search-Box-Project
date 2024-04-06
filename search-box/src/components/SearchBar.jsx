@@ -1,5 +1,4 @@
 const Search =  ({searchValue, setSearchValue}) => {
-    
 
     const searchHandler = (e) => {
         setSearchValue(e.target.value);
