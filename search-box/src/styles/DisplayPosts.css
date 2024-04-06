@@ -8,6 +8,10 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.highlightedtext{
+    background-color: yellow;
+}
+
 .displayed {
     border: 1px solid #ddd;
     margin-bottom: 20px;

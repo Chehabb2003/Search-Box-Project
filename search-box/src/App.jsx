@@ -3,12 +3,13 @@ import { useState } from "react";
 import FilterPosts from './components/FilterPosts';
 
 const App = () => {
+
   const [searchValue, setSearchValue] = useState('');
-  
+
   return (
     <div className="App">
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <FilterPosts searchValue ={searchValue}/>
+      <FilterPosts searchValue={searchValue} />
     </div>
   ); 
 }

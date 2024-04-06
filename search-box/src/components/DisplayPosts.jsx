@@ -5,7 +5,7 @@ const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
         const partsOfText = text.split(new RegExp(`(${hightlightWord})`, 'gi'))
         return partsOfText.map((partOfText) => {
             if (partOfText.toLowerCase() === hightlightWord.toLowerCase()) {
-                return <span style={{ backgroundColor: 'yellow' }}>{partOfText}</span>
+                return <span className='highlightedtext'>{partOfText}</span>
             }
             else {
                 return partOfText;
@@ -20,7 +20,7 @@ const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
                     {matchedCount > 1 ? <div className="displayed-count">{`${matchedCount} posts were found`}</div> : (
                         <div className="displayed-count">{`${matchedCount} post was found`}</div>
                     )}
-                    {filteredArticles.map(article => 
+                    {filteredArticles.map((article, i) => 
                         <div className="article">
                             <h1 className="title">{highightText(article.title, searchValue)}</h1>
                             <p className="Date">{article.date}</p>
