@@ -1,0 +1,53 @@
+.display-posts {
+    font-family: 'Arial', sans-serif;
+    width: 25%;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.displayed {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.displayed-count {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.article {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.article h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.article  p {
+    font-size: 14px;
+    color: #666;
+}
+
+.article div {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.nodisplay {
+    color: #999;
+    text-align: center;
+    font-style: italic;
+}
+
+

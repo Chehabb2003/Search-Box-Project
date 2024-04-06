@@ -1,0 +1,21 @@
+.search-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.clear-button {
+    background-color: white;
+    color: black;
+    padding: 0.4%;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+.search-input{
+    width: 20%;
+    margin-right: 0.5%;
+    padding: 0.2%;
+}

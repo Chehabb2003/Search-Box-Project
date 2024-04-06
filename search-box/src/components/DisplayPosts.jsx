@@ -1,3 +1,4 @@
+import '../styles/DisplayPosts.css'
 const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
     
     const highightText = (text, hightlightWord) => {
@@ -13,11 +14,11 @@ const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
     }
 
     return (
-        <div className="filtered-posts">
+        <div className="display-posts">
             {filteredArticles.length > 0 && searchValue !== '' & searchValue!== ' ' ? (
-                <div>
-                    {matchedCount > 1 ? <div>{`${matchedCount} posts were found`}</div> : (
-                        <div>{`${matchedCount} post was found`}</div>
+                <div className="displayed">
+                    {matchedCount > 1 ? <div className="displayed-count">{`${matchedCount} posts were found`}</div> : (
+                        <div className="displayed-count">{`${matchedCount} post was found`}</div>
                     )}
                     {filteredArticles.map(article => 
                         <div className="article">
@@ -28,7 +29,7 @@ const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
                     )}
                     </div>    
             ) : (
-                    <div></div>
+                    <div className="nodisplay">No posts where found</div>
             )}
         </div>
     )
