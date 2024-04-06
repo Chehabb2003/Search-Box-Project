@@ -1,24 +1,5 @@
-import { useEffect, useState } from "react";
-
-const DisplayPosts = ({searchValue}) => {
-    const articles = [{ title: 'Css Grid', date: 'Oct 09, 2018', content: 'Just Testing the Css Grid' },
-    { title: 'Css Grid2', date: 'Oct 09, 2018', content: 'Just Testing the Css Grid2' },
-    ]
-
-    const [matchedCount, setMatchedCount] = useState(0);
-
-    const filteredArticles = articles.filter(article => 
-        article.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        article.content.toLowerCase().includes(searchValue.toLowerCase())
-    )
-    console.log(filteredArticles);
-
-     useEffect(() => {
-        setMatchedCount(filteredArticles.length);
-    },[searchValue])
-
-
-
+const DisplayPosts = ({ matchedCount, filteredArticles, searchValue }) => {
+    
     const highightText = (text, hightlightWord) => {
         const partsOfText = text.split(new RegExp(`(${hightlightWord})`, 'gi'))
         return partsOfText.map((partOfText) => {
@@ -32,7 +13,7 @@ const DisplayPosts = ({searchValue}) => {
     }
 
     return (
-        <div className="articles">
+        <div className="filtered-posts">
             {filteredArticles.length > 0 && searchValue !== '' & searchValue!== ' ' ? (
                 <div>
                     {matchedCount > 1 ? <div>{`${matchedCount} posts were found`}</div> : (
@@ -49,7 +30,6 @@ const DisplayPosts = ({searchValue}) => {
             ) : (
                     <div></div>
             )}
-
         </div>
     )
 }
